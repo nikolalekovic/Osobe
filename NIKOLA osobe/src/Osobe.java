@@ -1,9 +1,8 @@
-import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Insets;
-import java.awt.TextArea;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -13,27 +12,24 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.awt.event.ActionEvent;
-
-import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
-import javax.swing.DefaultListModel;
 import javax.swing.border.TitledBorder;
-import javax.swing.SwingConstants;
-import javax.swing.JFormattedTextField;
 import javax.swing.JTextArea;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class Osobe extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -53,7 +49,8 @@ public class Osobe extends JFrame {
 	
 	public static boolean isNumeric(String strNum) {
 	    try {
-	        Integer d = Integer.parseInt(strNum);
+	        @SuppressWarnings("unused")
+			Integer d = Integer.parseInt(strNum);
 	    } catch (NumberFormatException | NullPointerException nfe) {
 	        return false;
 	    }
@@ -134,7 +131,6 @@ public class Osobe extends JFrame {
 		
 		ArrayList<String> os = new ArrayList<String>();
 		ArrayList<String> os2 = new ArrayList<String>();
-		Osoba o = new Osoba();
 		JButton btnNewButton = new JButton("Unesi");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

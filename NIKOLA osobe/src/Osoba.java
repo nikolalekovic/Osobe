@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Osoba {
 String ime;
 public String getIme() {
